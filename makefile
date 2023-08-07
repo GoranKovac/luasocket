@@ -24,15 +24,15 @@ test:
 	lua test/hello.lua
 
 install-both:
-	#$(MAKE) clean
-	#@cd src; $(MAKE) $(PLAT) LUAV=5.1
-	#@cd src; $(MAKE) install LUAV=5.1
-	#$(MAKE) clean
-	#@cd src; $(MAKE) $(PLAT) LUAV=5.2
-	#@cd src; $(MAKE) install LUAV=5.2
-	#$(MAKE) clean
-	#@cd src; $(MAKE) $(PLAT) LUAV=5.3
-	#@cd src; $(MAKE) install LUAV=5.3
+	$(MAKE) clean
+	@cd src; $(MAKE) $(PLAT) LUAV=5.1
+	@cd src; $(MAKE) install LUAV=5.1
+	$(MAKE) clean
+	@cd src; $(MAKE) $(PLAT) LUAV=5.2
+	@cd src; $(MAKE) install LUAV=5.2
+	$(MAKE) clean
+	@cd src; $(MAKE) $(PLAT) LUAV=5.3
+	@cd src; $(MAKE) install LUAV=5.3
 	$(MAKE) clean
 	@cd src; $(MAKE) $(PLAT) LUAV=5.4
 	@cd src; $(MAKE) install LUAV=5.4
